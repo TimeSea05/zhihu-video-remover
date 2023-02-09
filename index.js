@@ -12,7 +12,7 @@
 (function() {
   'use strict';
 
-  function hasVideoIndex(card) {
+  function hasVideoAtIndex(card) {
     return JSON.parse(card.childNodes[0].getAttribute('data-za-extra-module'))['card']['has_video']
   }
 
@@ -21,7 +21,7 @@
     let cards = document.querySelectorAll(recommendCardSelector)
   
     for (let card of cards) {
-      if (hasVideoIndex(card)) {
+      if (hasVideoAtIndex(card)) {
         card.remove()
       }
     }
