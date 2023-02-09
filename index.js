@@ -27,7 +27,7 @@
     }
   }
 
-  function hasVideoAnswers(answer) {
+  function hasVideoAtAnswers(answer) {
     for (let node of answer.childNodes) {
       if (node.className === 'VideoAnswerPlayer') {
         return true
@@ -42,7 +42,7 @@
     let answers = document.querySelectorAll(answerSelector)
   
     for (let answer of answers) {
-      if (hasVideoAnswers(answer)) {
+      if (hasVideoAtAnswers(answer)) {
         answer.remove()
       }
     }
